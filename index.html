@@ -23,7 +23,171 @@
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="/images/NŌODL Logo.png"
+                    alt="hot pink logo with a bowl of ramen and and chopsticks and noodles">
+            </a>
+
+            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#signature-bowls">SIGNATURE BOWLS</a></li>
+                <li><a href="#behind-scenes">BEHIND THE SCENES</a></li>
+                <li><a href="#come-visit">COME HAVE A BITE</a></li>
+                <li><a href="#social">SOCIAL MEDIA</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#map">MAP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">NŌODL</h1>
+                <p class="hero-subtitle">RAMEN // REDEFINED</p>
+                <p class="hero-description">NEO-TOKYO INSPIRED BOWLS, CRAFTED WITH PRECISION</p>
+                <a href="#signature-bowls" class="cta-button">EXPLORE MENU</a>
+            </div>
+            <div class="hero-image">
+                <img src="/images/Ramen - Skateboard.png" alt="noodle character on Skateboard">
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Bowls Section -->
+    <section id="signature-bowls" class="signature-bowls">
+        <div class="container">
+            <h2 class="section-title">NŌODL SIGNATURE BOWLS</h2>
+
+            <div class="bowls-grid">
+                <div class="bowl-card">
+                    <img src="" alt="">
+                    <h3 class="bowl-name">SHOYU CHICKEN RAMEN</h3>
+                    <p class="bowl-description">Soy-based broth with sliced grilled chicken, green onions, soft-boiled
+                        egg, and ramen noodles.</p>
+                    <button class="price-button">$13.50</button>
+                </div>
+
+                <div class="bowl-card">
+                    <div class="bowl-image-placeholder"></div>
+                    <h3 class="bowl-name">TONKOTSU RAMEN</h3>
+                    <p class="bowl-description">Rich pork-bone broth with chashu pork, black garlic oil, kikurage
+                        mushrooms, and green onions.</p>
+                    <button class="price-button">$14.50</button>
+                </div>
+
+                <div class="bowl-card">
+                    <div class="bowl-image-placeholder"></div>
+                    <h3 class="bowl-name">SPICY MISO RAMEN</h3>
+                    <p class="bowl-description">Miso broth with chili paste, ground pork, bean sprouts, corn, and sesame
+                        seeds.</p>
+                    <button class="price-button">$14.00</button>
+                </div>
+
+                <div class="bowl-card">
+                    <div class="bowl-image-placeholder"></div>
+                    <h3 class="bowl-name">CHICKEN PAITAN RAMEN</h3>
+                    <p class="bowl-description">Creamy chicken broth with grilled chicken, spinach, scallions, and a
+                        soft-boiled egg.</p>
+                    <button class="price-button">$13.75</button>
+                </div>
+
+                <div class="bowl-card">
+                    <div class="bowl-image-placeholder"></div>
+                    <h3 class="bowl-name">SHIO RAMEN</h3>
+                    <p class="bowl-description">Light salt-based broth with sliced pork, nori, green onions, and ramen
+                        noodles.</p>
+                    <button class="price-button">$12.75</button>
+                </div>
+
+                <div class="bowl-card">
+                    <div class="bowl-image-placeholder"></div>
+                    <h3 class="bowl-name">CURRY RAMEN</h3>
+                    <p class="bowl-description">Japanese curry-flavoured broth with chicken, carrots, green onions, and
+                        ramen noodles.</p>
+                    <button class="price-button">$13.75</button>
+                </div>
+            </div>
+    </section>
+
+    <!-- Behind the Scenes Section with Slick Slider -->
+    <section id="behind-scenes" class="behind-scenes">
+        <div class="container">
+            <h2 class="section-title">BEHIND THE SCENES AT NŌODL</h2>
+
+            <div class="scenes-slider">
+                <div class="scene-slide">
+                    <div class="scene-image scene-1"></div>
+                </div>
+                <div class="scene-slide">
+                    <div class="scene-image scene-2"></div>
+                </div>
+                <div class="scene-slide">
+                    <div class="scene-image scene-3"></div>
+                </div>
+                <div class="scene-slide">
+                    <div class="scene-image scene-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="come-visit" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="contact-title">HUNGRY?</h2>
+                    <div class="contact-details">
+                        <p class="contact-phone"><strong>P:</strong> 090-7288-1031</p>
+                        <p class="contact-email"><strong>E:</strong> contact@noodl.com</p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <div class="map-overlay">
+                        <div class="location-pin"></div>
+                    </div>
+                    <div class="address-box">
+                        <p>5-12-8 Higashihigashiya,<br>Shibuya-ku, Tokyo<br>150-0002 Japan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-logo">NŌODL</h3>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Email" class="email-input" required>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+                <p class="copyright">&copy; 2025</p>
+            </div>
+        </div>
+    </footer>
+
 
 </body>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/bcab9e1cd0.js" crossorigin="anonymous"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Slick Slider JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<!-- External JS -->
+<script src="js/script.js"></script>
 
 </html>
