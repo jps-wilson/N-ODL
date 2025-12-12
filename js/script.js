@@ -48,62 +48,51 @@ document.addEventListener("click", (e) => {
 // ===================================
 
 $(document).ready(function () {
-  // Initialize Slick Slider with 3 responsive breakpoints
-  $(".scenes-slider").slick({
-    // Mobile settings (default - 320px)
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    adaptiveHeight: true,
+  const $slider = $(".scenes-slider");
 
-    // Responsive breakpoints
-    responsive: [
-      {
-        // Tablet breakpoint - 768px
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true,
-          arrows: true,
-          infinite: true,
-          autoplay: true,
-          autoplaySpeed: 3000,
+  if ($slider.length && typeof $.fn.slick === "function") {
+    $slider.slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: false,
+      adaptiveHeight: true,
+      responsive: [
+        {
+          // Tablet + small desktop widths < 1280px
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          },
         },
-      },
-      {
-        // Desktop breakpoint - 1280px
-        breakpoint: 9999,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          dots: true,
-          arrows: true,
-          infinite: true,
-          autoplay: true,
-          autoplaySpeed: 4000,
+        {
+          // Mobile: widths < 768px
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          },
         },
-      },
-      {
-        // Mobile breakpoint - 320px to 767px
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          arrows: false,
-          infinite: true,
-          autoplay: true,
-          autoplaySpeed: 3000,
-        },
-      },
-    ],
-  });
+      ],
+    });
+  } else {
+    console.warn(
+      "Slick not initialized: slider element missing or Slick library not loaded."
+    );
+  }
 });
 
 // ===================================

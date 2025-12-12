@@ -310,31 +310,8 @@ MOBILE FIRST - 320px (4 columns, 16px gutters)
   height: 250px;
   border-radius: 8px;
   background-size: cover;
+  object-fit: cover;
   background-position: center;
-}
-
-.scene-1 {
-  background: linear-gradient(
-    135deg,
-    var(--color-dark-gray) 0%,
-    var(--color-black) 100%
-  );
-}
-
-.scene-2 {
-  background: linear-gradient(135deg, var(--color-pink) 0%, #ff3377 100%);
-}
-
-.scene-3 {
-  background: linear-gradient(
-    135deg,
-    var(--color-black) 0%,
-    var(--color-dark-gray) 100%
-  );
-}
-
-.scene-4 {
-  background: linear-gradient(135deg, #ff3377 0%, var(--color-pink) 100%);
 }
 
 /* Slick Slider Customization */
