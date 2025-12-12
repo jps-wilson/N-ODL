@@ -178,35 +178,32 @@ bowlCards.forEach((card, index) => {
   observer.observe(card);
 });
 
-// ===================================
-// ACTIVE NAVIGATION LINK HIGHLIGHTING
-// ===================================
-
-// Highlight active section in navigation
-const sections = document.querySelectorAll("section[id]");
-
 function highlightNavigation() {
-  const scrollY = window.pageYOffset;
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-menu a");
 
-  sections.forEach((section) => {
-    const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 100;
-    const sectionId = section.getAttribute("id");
-    const navLink = document.querySelector(`.nav-menu a[href="#${sectionId}"]`);
+  window.addEventListener("scroll", () => {
+    let currentSection = "";
 
-    if (navLink) {
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLink.style.color = "var(--color-pink)";
-        navLink.style.borderBottomColor = "var(--color-pink)";
-      } else {
-        navLink.style.color = "";
-        navLink.style.borderBottomColor = "transparent";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (window.scrollY >= sectionTop - 100) {
+        currentSection = section.getAttribute("id");
       }
-    }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      const href = link.getAttribute("href").substring(1);
+
+      if (href === currentSection) {
+        link.classList.add("active");
+      }
+    });
   });
 }
-
-window.addEventListener("scroll", highlightNavigation);
 
 // ===================================
 // WINDOW RESIZE HANDLER

@@ -83,11 +83,11 @@ MOBILE FIRST - 320px (4 columns, 16px gutters)
 .nav-logo img {
   height: 50px;
   width: auto;
+  background-color: var(--color-white);
 }
 
 /* Mobile Navigation Toggle */
 .nav-toggle {
-  background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -128,12 +128,7 @@ MOBILE FIRST - 320px (4 columns, 16px gutters)
   font-weight: 500;
   display: block;
   padding: 12px 0;
-  border-bottom: 2px solid var(--color-white);
-}
-
-.nav-menu a:hover {
-  color: var(--color-pink);
-  border-bottom-color: var(--color-pink);
+  text-decoration: underline;
 }
 
 /* HERO SECTION */
@@ -309,9 +304,7 @@ MOBILE FIRST - 320px (4 columns, 16px gutters)
   width: 100%;
   height: 250px;
   border-radius: 8px;
-  background-size: cover;
   object-fit: cover;
-  background-position: center;
 }
 
 /* Slick Slider Customization */
@@ -552,6 +545,10 @@ MOBILE FIRST - 320px (4 columns, 16px gutters)
   }
 
   .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .hero-description {
     font-size: 14px;
   }
 
