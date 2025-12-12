@@ -78,12 +78,12 @@ MOBILE FIRST - 320px (4 columns, 16px gutters)
 .nav-logo {
   display: flex;
   align-items: center;
+  background-color: var(--color-white);
 }
 
 .nav-logo img {
   height: 50px;
   width: auto;
-  background-color: var(--color-white);
 }
 
 /* Mobile Navigation Toggle */
@@ -175,6 +175,7 @@ MOBILE FIRST - 320px (4 columns, 16px gutters)
   color: var(--color-dark-gray);
   margin-bottom: 24px;
   line-height: 1.5;
+  font-weight: bold;
 }
 
 .cta-button {
@@ -680,7 +681,7 @@ MOBILE FIRST - 320px (4 columns, 16px gutters)
   }
 
   .nav-logo img {
-    height: 70px;
+    height: 90px;
   }
 
   /* Desktop Navigation — horizontal layout */
